@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '80vh',
   },
   footer: {
+<<<<<<< HEAD
     marginTop: 40,
     minHeight: '10vh',
     textAlign: 'right',
@@ -26,6 +27,11 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:'20px',
     backgroundColor: '#208070',
 
+=======
+    marginTop: 30,
+    marginRight: 30,
+    textAlign: 'right',
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
   },
   section: {
     marginTop: 10,
@@ -44,7 +50,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'transparent',
   },
   error: {
+<<<<<<< HEAD
     color: '#f08080',
+=======
+    color: '#f04040',
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
   },
   fullWidth: {
     width: '100%',
@@ -64,12 +74,15 @@ const useStyles = makeStyles((theme) => ({
   menuButton: { padding: 0 },
   mt1: { marginTop: '1rem' },
 
+<<<<<<< HEAD
   absolute: {
     position: "absolute",
     width: '50%' ,
     bottom: "100px",
   }, 
 
+=======
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
   // searcharea
   searchSection: {
     display: 'none',

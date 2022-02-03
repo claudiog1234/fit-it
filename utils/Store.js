@@ -8,12 +8,23 @@ const initialState = {
     cartItems: Cookies.get('cartItems')
       ? JSON.parse(Cookies.get('cartItems'))
       : [],
+<<<<<<< HEAD
     shippingAddress: Cookies.get('shippingAddress')
       ? JSON.parse(Cookies.get('shippingAddress'))
+=======
+    billingAddress: Cookies.get('billingAddress') //shippingAddress //shippingAddress
+      ? JSON.parse(Cookies.get('billingAddress')) //shippingAddress
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
       : { location: {} },
     paymentMethod: Cookies.get('paymentMethod')
       ? Cookies.get('paymentMethod')
       : '',
+<<<<<<< HEAD
+=======
+    aboModell: Cookies.get('aboModell')
+      ? Cookies.get('aboModell')
+      : '',
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
   },
   userInfo: Cookies.get('userInfo')
     ? JSON.parse(Cookies.get('userInfo'))
@@ -46,24 +57,42 @@ function reducer(state, action) {
       Cookies.set('cartItems', JSON.stringify(cartItems));
       return { ...state, cart: { ...state.cart, cartItems } };
     }
+<<<<<<< HEAD
     case 'SAVE_SHIPPING_ADDRESS':
+=======
+    case 'SAVE_BILLING_ADDRESS': //SAVE_SHIPPING_ADDRESS
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
       return {
         ...state,
         cart: {
           ...state.cart,
+<<<<<<< HEAD
           shippingAddress: {
             ...state.cart.shippingAddress,
+=======
+          billingAddress: { //shippingAddress
+            ...state.cart.billingAddress, //shippingAddress
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
             ...action.payload,
           },
         },
       };
+<<<<<<< HEAD
     case 'SAVE_SHIPPING_ADDRESS_MAP_LOCATION':
+=======
+    case 'SAVE_BILLING_ADDRESS_MAP_LOCATION': //SAVE_SHIPPING_ADDRESS_MAP_LOCATION
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
       return {
         ...state,
         cart: {
           ...state.cart,
+<<<<<<< HEAD
           shippingAddress: {
             ...state.cart.shippingAddress,
+=======
+          billingAddress: {    //shippingAddress
+            ...state.cart.billingAddress,  //shippingAddress
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
             location: action.payload,
           },
         },
@@ -73,6 +102,18 @@ function reducer(state, action) {
         ...state,
         cart: { ...state.cart, paymentMethod: action.payload },
       };
+<<<<<<< HEAD
+=======
+
+      //neu
+      case 'SAVE_ABO_MODELL':
+        return {
+          ...state,
+          cart: { ...state.cart, aboModell: action.payload },
+        };
+
+    //neu
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
     case 'CART_CLEAR':
       return { ...state, cart: { ...state.cart, cartItems: [] } };
     case 'USER_LOGIN':
@@ -83,7 +124,11 @@ function reducer(state, action) {
         userInfo: null,
         cart: {
           cartItems: [],
+<<<<<<< HEAD
           shippingAddress: { location: {} },
+=======
+          billingAddress: { location: {} }, //shippingAddress
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
           paymentMethod: '',
         },
       };

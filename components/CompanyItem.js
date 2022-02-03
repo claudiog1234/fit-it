@@ -8,7 +8,10 @@ import {
   Typography,
 } from '@material-ui/core';
 import React from 'react';
+<<<<<<< HEAD
 import Divider from '@mui/material/Divider';
+=======
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
 import NextLink from 'next/link';
 
 export default function CompanyItem({ company, addToCartHandler }) {
@@ -31,6 +34,7 @@ export default function CompanyItem({ company, addToCartHandler }) {
           </CardContent>
         </CardActionArea>
       </NextLink>
+<<<<<<< HEAD
       <Divider />
       <CardActions>
         <Typography> More information ?</Typography>
@@ -39,6 +43,17 @@ export default function CompanyItem({ company, addToCartHandler }) {
           Click here !
         </Button>
         </NextLink>
+=======
+      <CardActions>
+        <Typography> More information ?</Typography>
+        <Button
+          size="small"
+          color="primary"
+          onClick={() => addToCartHandler(product)}
+        >
+          Click here !
+        </Button>
+>>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
       </CardActions>
     </Card>
   );
