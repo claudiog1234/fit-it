@@ -24,19 +24,11 @@ export default function Payment() {
   const [paymentMethod, setPaymentMethod] = useState('');
   const { state, dispatch } = useContext(Store);
   const {
-<<<<<<< HEAD
-    cart: { shippingAddress },
-  } = state;
-  useEffect(() => {
-    if (!shippingAddress.address) {
-      router.push('/shipping');
-=======
     cart: { billingAddress }, //shippingAddress, aboModell
   } = state;
   useEffect(() => {
     if (!billingAddress.address) { //!shippingAddress.address
       router.push('/billing'); //shipping
->>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
     } else {
       setPaymentMethod(Cookies.get('paymentMethod') || '');
     }
@@ -54,11 +46,7 @@ export default function Payment() {
   };
   return (
     <Layout title="Payment Method">
-<<<<<<< HEAD
-      <CheckoutWizard activeStep={2}></CheckoutWizard>
-=======
       <CheckoutWizard activeStep={3}></CheckoutWizard>
->>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
       <form className={classes.form} onSubmit={submitHandler}>
         <Typography component="h1" variant="h1">
           Payment Method
@@ -78,13 +66,8 @@ export default function Payment() {
                   control={<Radio />}
                 ></FormControlLabel>
                 <FormControlLabel
-<<<<<<< HEAD
-                  label="Stripe"
-                  value="Stripe"
-=======
                   label="Card"
                   value="Card"
->>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
                   control={<Radio />}
                 ></FormControlLabel>
                 <FormControlLabel
@@ -105,11 +88,7 @@ export default function Payment() {
               fullWidth
               type="button"
               variant="contained"
-<<<<<<< HEAD
-              onClick={() => router.push('/shipping')}
-=======
               onClick={() => router.push('/abo')}
->>>>>>> 36029ec239f0d07774168744a2ba29bf542ae748
             >
               Back
             </Button>
